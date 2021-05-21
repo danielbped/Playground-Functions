@@ -74,9 +74,7 @@ function hydrate(pedidos) {
     soma = soma + pedido;
   }
 
-  if (soma === 1)
-    return `${soma} copo de água`;
-  return `${soma} copos de água`;
+  soma === 1 ? `${soma} copo de água` : `${soma} copos de água`;
   
 }
 
