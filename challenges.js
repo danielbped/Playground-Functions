@@ -1,31 +1,17 @@
 // Desafio 1
-function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true)
-    return true;
-  return false;
-}
+const compareTrue = (valor1, valor2) => valor1 === true && valor2 === true ? true: false;
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) => (base * height/2);
 
 // Desafio 3
-function splitSentence(nameToSplit) {
-  return nameToSplit.split(' ');
-}
+const splitSentence = nameToSplit => nameToSplit.split(' ');
 
 // Desafio 4
-function concatName(arrayStringsToConcat) {
-  return `${arrayStringsToConcat[arrayStringsToConcat.length - 1]}, ${
-    arrayStringsToConcat[0]
-  }`;
-}
+const concatName = arrayStringsToConcat => `${arrayStringsToConcat[arrayStringsToConcat.length - 1]}, ${arrayStringsToConcat[0]}`;
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  return wins * 3 + ties * 1;
-}
+const footballPoints = (wins, ties) => (wins * 3 + ties * 1);
 
 // Desafio 6
 function highestCount(arrayToCount) {
