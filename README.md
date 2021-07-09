@@ -1,4 +1,4 @@
-# Projeto Playground Functions
+# Projeto [Playground Functions](https://github.com/tryber/sd-012-project-playground-functions/pull/11)
   - Módulo 1: Fundamentos do Desenvolvimento Web
     - Bloco 4: Introdução à JavaScript e Lógica da Programação
 
