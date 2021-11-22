@@ -1,37 +1,38 @@
 // Desafio 1
-const compareTrue = (valor1, valor2) => valor1 === true && valor2 === true ? true: false;
+const compareTrue = (num1:boolean, num2:boolean):boolean => num1 && num2;
 
 // Desafio 2
-const calcArea = (base, height) => (base * height/2);
+const calcArea = (base:number, height:number):number => (base * height/2);
 
 // Desafio 3
-const splitSentence = nameToSplit => nameToSplit.split(' ');
+const splitSentence = (nameToSplit:string):string[] => nameToSplit.split(' ');
 
 // Desafio 4
-const concatName = arrayStringsToConcat => `${arrayStringsToConcat[arrayStringsToConcat.length - 1]}, ${arrayStringsToConcat[0]}`;
+const concatName = (arrayOfStringsToConcat:string[]):string => `${arrayOfStringsToConcat[arrayOfStringsToConcat.length - 1]}, ${arrayOfStringsToConcat[0]}`;
 
 // Desafio 5
-const footballPoints = (wins, ties) => (wins * 3 + ties * 1);
+const footballPoints = (wins:number, ties:number):number => (wins * 3) + ties;
 
 // Desafio 6
-function highestCount(arrayToCount) {
-  let highestNumber = 0;
-  let highestNumberCount = 0;
-
-  for (let index = 0; index < arrayToCount.length; index += 1) {
+const highestCount = (arrayToCount:number[]):number => {
+  let highestNumber:number = 0;
+  let highestNumberCount:number = 0;
+  
+  for (let index:number = 0; index < arrayToCount.length; index += 1) {
     if (arrayToCount[index] > highestNumber) {
       highestNumber = arrayToCount[index];
       highestNumberCount = 0;
       highestNumberCount += 1;
     } else if (arrayToCount[index] === highestNumber) {
-      highestNumberCount += 1;
+      highestNumberCount += 1
     }
   }
+
   return highestNumberCount;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+const catAndMouse = (mouse:number, cat1:number, cat2:number):string => {
   let cat1ToMouse = Math.abs(mouse - cat1);
   let cat2ToMouse = Math.abs(mouse - cat2);
 
@@ -39,14 +40,15 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (cat1ToMouse < cat2ToMouse) {
     return 'cat1';
-  } else if (cat1ToMouse === cat2ToMouse) {
-    return 'os gatos trombam e o rato foge';
   }
+
+  return 'os gatos trombam e o rato foge';
 }
 
+
 // Desafio 8
-function fizzBuzz(arrayToFizzBuzz) {
-  for (let index = 0; index < arrayToFizzBuzz.length; index += 1) {
+const fizzBuzz = (arrayToFizzBuzz: any[]):string[] => {
+  for (let index:number = 0; index < arrayToFizzBuzz.length; index += 1) {
     if (arrayToFizzBuzz[index] % 3 === 0 && arrayToFizzBuzz[index] % 5 === 0) {
       arrayToFizzBuzz[index] = 'fizzBuzz';
     } else if (arrayToFizzBuzz[index] % 3 === 0) {
@@ -61,10 +63,11 @@ function fizzBuzz(arrayToFizzBuzz) {
 }
 
 // Desafio 9
-function encode(stringToEncode) {
+
+const encode = (stringToEncode:string | any[]): string => {
   stringToEncode = stringToEncode.toString().split('');
 
-  for (let index = 0; index < stringToEncode.length; index += 1) {
+  for (let index:number = 0; index < stringToEncode.length; index += 1) {
     switch (stringToEncode[index]) {
       case 'a':
         stringToEncode[index] = 1;
@@ -90,10 +93,10 @@ function encode(stringToEncode) {
   return stringToEncode.join('');
 }
 
-function decode(stringToDecode) {
+const decode = (stringToDecode:number | string[]):string => {
   stringToDecode = stringToDecode.toString().split('');
 
-  for (let index = 0; index < stringToDecode.length; index += 1) {
+  for (let index:number = 0; index < stringToDecode.length; index += 1) {
     switch (stringToDecode[index]) {
       case '1':
         stringToDecode[index] = 'a';
@@ -119,7 +122,7 @@ function decode(stringToDecode) {
   return stringToDecode.join('');
 }
 
-module.exports = {
+export = {
   calcArea,
   catAndMouse,
   compareTrue,

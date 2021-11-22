@@ -1,5 +1,5 @@
 // Desafio 10*
-function techList(tech, name) {
+function techList(tech:string[], name:string):string | object {
   if (tech.length === 0) {
     return 'Vazio!';
   } else {
@@ -16,7 +16,7 @@ function techList(tech, name) {
 }
 
 // Desafio 11*
-function generatePhoneNumber(arrayNumbers) {
+function generatePhoneNumber(arrayNumbers:number[]):any {
   let numeroCorreto = true;
   let numero;
   if (arrayNumbers.length === 11) {
@@ -52,7 +52,7 @@ function generatePhoneNumber(arrayNumbers) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck(lineA:number, lineB:number, lineC:number):boolean {
   if (
     Math.abs(lineA + lineB) > lineC 
     && Math.abs(lineB + lineC) > lineA 
@@ -66,7 +66,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(pedidos) {
+function hydrate(pedidos:any):string {
   let soma = 0;
   pedidos = pedidos.toString().split('');
   for (let pedido of pedidos) {
@@ -74,11 +74,11 @@ function hydrate(pedidos) {
     soma = soma + pedido;
   }
 
-  soma === 1 ? `${soma} copo de água` : `${soma} copos de água`;
+  return soma === 1 ? `${soma} copo de água` : `${soma} copos de água`;
   
 }
 
-module.exports = {
+export = {
   generatePhoneNumber,
   techList,
   hydrate,
